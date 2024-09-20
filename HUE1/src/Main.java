@@ -5,5 +5,6 @@ public class Main {
 
         EratosthenesPrimeSieve eratosthenesPrimeSieve=new EratosthenesPrimeSieve();
         eratosthenesPrimeSieve.printPrimes();
+        eratosthenesPrimeSieve.calcNumbersWithPrimes();
     }
 }

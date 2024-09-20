@@ -41,7 +41,16 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
                 primes.add(i);
             }
         }
-
-        
+        for (int i=4;i<=max;i=i+2){
+            exitpoint:
+            for (int j=0;j<primes.size();j++){
+                for (int k=0;k<primes.size();k++){
+                    if ((primes.get(j)+primes.get(k))==i){
+                        System.out.println(primes.get(j)+"+"+primes.get(k)+"="+i);
+                        break exitpoint;
+                    }
+                }
+            }
+        }
     }
 }

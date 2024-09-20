@@ -2,22 +2,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EratosthenesPrimeSieve implements PrimeSieve{
-    private int max=10;
+    private int max;
     private boolean[] crossed=new boolean[max];
 
 
+    public EratosthenesPrimeSieve(int max) {
+        this.max = max;
+    }
 
     @Override
     public boolean isPrime(int p) {
 
         boolean[] sieve =new boolean[p+1];
-        for (int i=2;i<=p;i++){
+        for (int i=2; i<=p; i++){
             sieve[i]=false;
         }
 
-        for (int i=2;i<=Math.sqrt(p);i++){
+        for (int i=2; i<=Math.sqrt(p); i++){
             if (!sieve[i]){
-                for (int j=i*i;j<=p;j=j+i){
+                for (int j=i*i; j<=p; j=j+i){
                     sieve[j]=true;
                 }
             }

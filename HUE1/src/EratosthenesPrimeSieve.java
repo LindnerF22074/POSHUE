@@ -30,4 +30,8 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
             }
         }
     }
+
+    public void calcNumbersWithPrimes(){
+        
+    }
 }

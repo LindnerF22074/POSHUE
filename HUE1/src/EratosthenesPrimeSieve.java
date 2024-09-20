@@ -27,14 +27,20 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
 
     @Override
     public void printPrimes() {
+        String output="";
         for (int i=2;i<=max;i++){
             if(isPrime(i)){
-                System.out.println(i);
+                output=output+i+",";
             }
         }
+        System.out.println("Primes from 0 to "+max+":");
+        System.out.println(output.substring(0,output.length()-1));
+        System.out.println();
     }
 
     public void calcNumbersWithPrimes(){
+        System.out.println("Numbers calculated with primes: ");
+
         List<Integer> primes=new ArrayList<>();
         for (int i=2;i<=max;i++){
             if (isPrime(i)) {
